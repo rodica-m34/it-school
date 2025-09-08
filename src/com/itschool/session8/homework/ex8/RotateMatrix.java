@@ -5,7 +5,7 @@ public class RotateMatrix {
         int n = matrix.length;
         int m = matrix[0].length;
         //System.out.println(n);
-        int rMat [][] = new int [m][n];
+        int [][] rMat = new int [m][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 rMat[j][n-i-1] = matrix[i][j];

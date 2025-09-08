@@ -8,9 +8,9 @@ public class MultiplyElements {
                 mMat[i][j] = matrix[i][j] * elem;
             }
         }
-        for (int i = 0; i < mMat.length; i++) {
-            for (int j = 0; j < mMat[i].length; j++) {
-                System.out.print(mMat[i][j] + " ");
+        for (int[] ints : mMat) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
             }
             System.out.println();
         }
