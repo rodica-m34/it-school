@@ -9,7 +9,6 @@ public class ContinueStatement {
         The program ends when 0 is entered.*/
         sumOfEvenNumbers();
     }
-
     public static void sumOfEvenNumbers() {
         Scanner sc = new Scanner(System.in);
         int sum = 0;
