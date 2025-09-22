@@ -1,0 +1,16 @@
+package com.itschool.session13.homework.ex1CollegeManagementSystem;
+
+public class Student {
+    String firstName, lastName, address;
+    char sex;
+    int age, dateOfBirth;
+    String CNP;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
+}
