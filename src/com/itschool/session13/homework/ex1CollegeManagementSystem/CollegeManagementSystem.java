@@ -5,5 +5,5 @@ import java.util.ArrayList;
 public class CollegeManagementSystem {
     ArrayList<Student> students = new ArrayList<>();
     ArrayList<Professor> professors = new ArrayList<>();
-    ArrayList<Courses> courses = new ArrayList<>();
+    ArrayList<Course> courses = new ArrayList<>();
 }

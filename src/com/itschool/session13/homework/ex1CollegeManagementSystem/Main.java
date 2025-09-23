@@ -46,27 +46,27 @@ public class Main {
         college.students.add(student1);
         college.students.add(student2);
 
-        Courses courses1 = new Courses();
-        ArrayList<String> typeOfCourse = new ArrayList<>(List.of("Math", "Computer Science", "Physics",
-                "Chemistry", "Biology", "Geography", "English", "History"));
+        List<String> typeOfCourse = List.of("Math", "Computer Science", "Physics",
+                "Chemistry", "Biology", "Geography", "English", "History");
+        Course courses1 = new Course();
         courses1.description=typeOfCourse.get(0);
         courses1.schedule= "Friday";
         courses1.assignedProfessor=professor1;
+        courses1.assignedStudents.add(student1);
+        courses1.assignedStudents.add(student2);
 
-        Courses courses2 = new Courses();
+        Course courses2 = new Course();
         courses2.description=typeOfCourse.get(2);
         courses2.schedule="Tuesday";
         courses2.assignedProfessor=professor2;
+        courses2.assignedStudents.add(student2);
 
         college.courses.add(courses1);
         college.courses.add(courses2);
 
         System.out.println("Courses and assigned professors are: ");
-        for (Courses course : college.courses){
+        for (Course course : college.courses){
             System.out.println(course);
         }
-        /*for (Student student : college.students){
-            System.out.println(student);
-        }*/
     }
 }

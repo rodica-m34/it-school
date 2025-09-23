@@ -1,9 +1,11 @@
 package com.itschool.session13.homework.ex1CollegeManagementSystem;
 
 public class Student {
-    String firstName, lastName, address;
+    String firstName;
+    String lastName;
     char sex;
-    int age, dateOfBirth;
+    int age;
+    int dateOfBirth;
     String CNP;
 
     @Override

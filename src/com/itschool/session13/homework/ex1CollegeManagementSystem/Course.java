@@ -1,17 +1,21 @@
 package com.itschool.session13.homework.ex1CollegeManagementSystem;
 
-public class Courses {
+import java.util.ArrayList;
+
+public class Course {
 
     String description;
     String schedule;
     Professor assignedProfessor = new Professor();
+    ArrayList<Student> assignedStudents = new ArrayList<>();
 
     @Override
     public String toString() {
-        return "Courses: " +
+        return "Course{" +
                 "description='" + description + '\'' +
                 ", schedule='" + schedule + '\'' +
                 ", assignedProfessor=" + assignedProfessor +
+                ", assignedStudents=" + assignedStudents +
                 '}';
     }
 }

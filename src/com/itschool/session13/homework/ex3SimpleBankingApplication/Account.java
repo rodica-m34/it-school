@@ -6,8 +6,8 @@ public class Account {
     int initialDeposit;
     int currentBalance;
     String currency;
-    /*    ArrayList<Integer> deposits = new ArrayList<>();
-        ArrayList<Integer> withdrawals = new ArrayList<>();*/
+    ArrayList<Integer> deposits = new ArrayList<>();
+    ArrayList<Integer> withdrawals = new ArrayList<>();
     ArrayList<String> transactions = new ArrayList<>();
 
     public void depositMoney(int amount) {
