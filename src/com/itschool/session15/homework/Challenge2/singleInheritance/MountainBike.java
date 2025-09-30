@@ -1,8 +1,8 @@
 package com.itschool.session15.homework.Challenge2.singleInheritance;
 
 public class MountainBike extends Bicycle{
-    String tireType;
-    String suspension;
+    private String tireType;
+    private String suspension;
 
     public MountainBike(String brandName, int speed, int gear, String tireType, String suspension) {
         super(brandName, speed, gear);

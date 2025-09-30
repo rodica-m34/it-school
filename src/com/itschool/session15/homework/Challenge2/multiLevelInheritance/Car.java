@@ -1,9 +1,9 @@
 package com.itschool.session15.homework.Challenge2.multiLevelInheritance;
 
 public class Car {
-    String make;
-    String model;
-    int year;
+    protected String make;
+    protected String model;
+    protected int year;
 
     public Car (String make, String model, int year){
         this.make=make;

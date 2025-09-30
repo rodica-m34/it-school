@@ -17,7 +17,7 @@ public class TestCarClass {
         electricCar.charge();
         System.out.println("---------------------------------");
 
-        Tesla tesla = new Tesla("Tesla", "Model3", 2025, 82, 626, 3.0);
+        Tesla tesla = new Tesla( "Model3", 2025, 82, 626, 3.0);
         System.out.println(tesla);
         tesla.charge();
         tesla.start();

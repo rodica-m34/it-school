@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class BankAccount {
     private String accountHolderName;
-    Random random = new Random();
-    //private static final String accountNumber = "ROOFING1453768743";
     private int accountNumber;
     private double balance;
     private static int noOfAccountsOpenedInTheBank=0;
@@ -14,8 +12,7 @@ public class BankAccount {
         this.accountHolderName = accountHolderName;
         this.balance = balance;
         noOfAccountsOpenedInTheBank++;
-        final int accountGenerator = noOfAccountsOpenedInTheBank;
-        accountNumber = accountGenerator;
+        accountNumber = noOfAccountsOpenedInTheBank;
     }
 
     public void deposit (double amount) {

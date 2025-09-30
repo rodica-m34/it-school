@@ -16,7 +16,7 @@ public class SpeedBoat extends Boat {
 
     @Override
     public void sail() {
-        System.out.println("Spped Boat is sailing");
+        System.out.println("Speed Boat is sailing");
     }
 
     @Override

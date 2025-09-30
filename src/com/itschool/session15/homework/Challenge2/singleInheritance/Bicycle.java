@@ -1,7 +1,7 @@
 package com.itschool.session15.homework.Challenge2.singleInheritance;
 
 public class Bicycle {
-    String brandName;
+    protected String brandName;
     protected int speed;
     protected int gear;
 
