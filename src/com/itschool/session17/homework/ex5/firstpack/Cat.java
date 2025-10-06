@@ -11,5 +11,4 @@ public class Cat extends Animal{
     protected void dogs() {
         System.out.println("Cats cannot bark");
     }
-
 }

@@ -1,9 +1,9 @@
 package com.itschool.session17.homework.ex3;
 
 public class StudentA extends Marks{
-    final int subject1;
-    final int subject2;
-    final int subject3;
+    private final int subject1;
+    private final int subject2;
+    private final int subject3;
 
     public StudentA(int subject1, int subject2, int subject3){
         this.subject1 = subject1;
