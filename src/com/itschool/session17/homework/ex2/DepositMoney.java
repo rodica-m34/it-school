@@ -1,7 +1,7 @@
 package com.itschool.session17.homework.ex2;
 
-public class DepositMoney {
-    Bank bank;
+public final class DepositMoney {
+    private final Bank bank;
 
     public DepositMoney(Bank bank) {
         this.bank=bank;
