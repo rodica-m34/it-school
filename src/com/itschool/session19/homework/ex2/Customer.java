@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class Customer {
     private final String name;
-    private String email;
-    private String shippingAddress;
-    private String billingAddress;
-    private ArrayList<Product> shoppingCart = new ArrayList<>();
-    private ArrayList<Order> orders = new ArrayList<>();
-    private int i=0;
+    private final String email;
+    private final String shippingAddress;
+    private final String billingAddress;
+    private final ArrayList<Product> shoppingCart = new ArrayList<>();
+    private final ArrayList<Order> orders = new ArrayList<>();
+    private static int i=0;
 
     public Customer(String name, String email, String shippingAddress, String billingAddress) {
         this.name = name;
@@ -54,13 +54,9 @@ public class Customer {
         return "No" + i++;
     }
 
-    //modified
     //am adaugat in constr comenzii product list
-    //am scos metodele de add si remove din comanda
-    //cum adaug nr comenzii?
     public Order placeOrder (){
-        //tb resetat shopping cart pt ca la o noua comanda adauga produse peste ele
-        //shoppingCart = new ArrayList<>();
+        //tb resetat shopping cart  la o noua comanda
         ArrayList <Product> actualShoppingCart = new ArrayList<>(shoppingCart);
         Order order = new Order(getAnOrderNumber(), "order placed", this, actualShoppingCart);
         orders.add(order);

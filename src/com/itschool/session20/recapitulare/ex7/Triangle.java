@@ -1,8 +1,8 @@
 package com.itschool.session20.recapitulare.ex7;
 
 public class Triangle extends Shape{
-    private int height;
-    private int base;
+    private final int height;
+    private final int base;
 
     public Triangle( int height, int base) {
         super("Triangle");

@@ -1,13 +1,15 @@
 package com.itschool.session19.homework.ex2;
 
+import com.itschool.session19.homework.ex1.Book;
+
 import java.util.ArrayList;
 
 public class Product {
-    private String name;
-    private String description;
-    private int price;
+    private final String name;
+    private final String description;
+    private final int price;
     private int quantity;
-    private ArrayList<Product> inventory = new ArrayList<>();
+    private final ArrayList<Product> inventory = new ArrayList<>();
 
     public Product(String name, String description, int price, int quantity) {
         this.name = name;
@@ -36,17 +38,18 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public  boolean productIsInStock (Product product){
-        if (inventory.contains(product) && product.quantity>0){
-            return true;
+    public  boolean productIsInStock (Product productToBeVerified){
+        for (Product product : inventory){
+            if (product.getName().equals(productToBeVerified.getName()) &&
+                    product.getDescription().equals(productToBeVerified.getDescription()) && productToBeVerified.getQuantity()>0){
+                return true;
+            }
         }
         return false;
     }
 
     public void addProductToInventory (Product newProduct){
-        //verific dc produsul e deja in stoc si ii maresc cant
-        //ii verifica toate campurile? sau dupa ce criteriu
-        if (productIsInStock(newProduct)){
+        if (productIsInStock(newProduct)  ){
             int newQuantity = quantity + newProduct.quantity;
             setQuantity(newQuantity);
             return;

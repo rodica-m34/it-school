@@ -3,8 +3,11 @@ package com.itschool.session19.homework.ex1;
 import java.util.ArrayList;
 
 public class Library {
-    private ArrayList<Book> books = new ArrayList<>();
-    private ArrayList<Member> members = new ArrayList<>();
+    private final ArrayList<Book> books = new ArrayList<>();
+    private final ArrayList<Member> members = new ArrayList<>();
+    public static final String TITLE_CRITERIA = "title";
+    public static final String AUTHOR_CRITERIA = "author";
+    public static final String ISBN_CRITERIA = "ISBN";
 
     public void addBooks (Book newBook){
         if (checkIfAlreadyAvailable(newBook)){
@@ -33,11 +36,16 @@ public class Library {
 
     private boolean checkIfAlreadyAvailable(Book bookToSearch){
         for (Book book : books){
-            if (book==bookToSearch && book.isBookAvailable()){
+            if (book.isBookAvailable() && isSameBook(book, bookToSearch)){
                 return true;
             }
         }
         return false;
+    }
+
+    private boolean isSameBook(Book libraryBook, Book bookToSearch) {
+        return libraryBook.getAuthor().equals(bookToSearch.getAuthor()) &&
+                libraryBook.getTitle().equals(bookToSearch.getTitle());
     }
 
     //search for books by title, author, or ISBN
@@ -45,20 +53,20 @@ public class Library {
     public boolean searchBookByCriteria (String criteria, String criteriaName){
         boolean booksWasFound=false;
         for (Book book : books){
-            if (criteria=="title"){
-                if (book.getTitle()==criteriaName){
+            if (TITLE_CRITERIA.equals(criteria)){
+                if (book.getTitle().equals(criteriaName)){
                     booksWasFound=true;
                 }
                 return booksWasFound;
             }
-            if (criteria=="author"){
-                if (book.getAuthor()==criteriaName){
+            if (AUTHOR_CRITERIA.equals(criteria)){
+                if (book.getAuthor().equals(criteriaName)){
                     booksWasFound=true;
                 }
                 return booksWasFound;
             }
-            if (criteria=="ISBN"){
-                if (book.getISBN()==criteriaName){
+            if (ISBN_CRITERIA.equals(criteria)){
+                if (book.getISBN().equals(criteriaName)){
                     booksWasFound=true;
                 }
                 return booksWasFound;
@@ -109,6 +117,8 @@ public class Library {
         for (Member member : members){
             System.out.println("Member name: "+ member.getName());
             System.out.println("Member id: " + member.getId());
+            System.out.println("Member address is: " + member.getAddress());
+            System.out.println("Member contact information: " + member.getContactInformation());
         }
     }
 }

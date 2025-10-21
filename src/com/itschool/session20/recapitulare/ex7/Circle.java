@@ -1,7 +1,7 @@
 package com.itschool.session20.recapitulare.ex7;
 
 public class Circle extends Shape{
-    private int radius;
+    private final int radius;
 
     public Circle(int radius) {
         super("Circle");

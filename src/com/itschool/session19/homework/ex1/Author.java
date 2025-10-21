@@ -6,7 +6,7 @@ public class Author {
     private final String name;
     private final String nationality;
     private final String dateOfBirth;
-    private ArrayList<Book> books = new ArrayList<>();
+    private final ArrayList<Book> books = new ArrayList<>();
     public Author(String name, String nationality, String dateOfBirth) {
         this.name = name;
         this.nationality = nationality;

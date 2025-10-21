@@ -3,13 +3,13 @@ package com.itschool.session19.homework.ex1;
 import java.util.ArrayList;
 
 public class Member {
-    private String name;
-    private String address;
-    private String contactInformation;
-    private int id;
-    private ArrayList<Book> borrowedBooks = new ArrayList<>();
-    private ArrayList<Book> overdueBooks = new ArrayList<>();
-    //care sunt cu final?
+    private final String name;
+    private final String address;
+    private final String contactInformation;
+    private final int id;
+    private final ArrayList<Book> borrowedBooks = new ArrayList<>();
+    private final ArrayList<Book> overdueBooks = new ArrayList<>();
+
     public Member(String name, String address, String contactInformation, int id) {
         this.name = name;
         this.address = address;
@@ -23,6 +23,14 @@ public class Member {
 
     public int getId() {
         return id;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getContactInformation() {
+        return contactInformation;
     }
 
     public boolean hasOverdueBooks(){

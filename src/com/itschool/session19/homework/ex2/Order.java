@@ -13,7 +13,6 @@ public class Order {
         this.status = status;
         this.customerInformation=customerInformation;
         this.products=products;
-        // adaugat acum
     }
 
     public String getOrderNumber() {
@@ -47,10 +46,10 @@ public class Order {
         return sum;
     }
 
-    //de verificat
     public void displayOrderInformation (){
         System.out.println("Order no " + orderNumber);
         System.out.println("Order amount " + calculateTotalOrderAmount());
+        System.out.println("Client " + customerInformation.getName());
 
     }
 

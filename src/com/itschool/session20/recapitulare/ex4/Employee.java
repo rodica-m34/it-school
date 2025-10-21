@@ -1,10 +1,10 @@
 package com.itschool.session20.recapitulare.ex4;
 
 public class Employee {
-    private String name;
-    private int id;
+    private final String name;
+    private final int id;
     private int salary;
-    private String jobTitle;
+    private final String jobTitle;
 
     public Employee(String name, int id, int salary, String jobTitle) {
         this.name = name;

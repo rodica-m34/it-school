@@ -30,7 +30,7 @@ public class Main {
         //add books to library
         library.addBooks(book1);
         library.addBooks(book2);
-        System.out.println(library.searchBookByCriteria("title","Solenoid"));
+        System.out.println(library.searchBookByCriteria(Library.TITLE_CRITERIA,"Solenoid"));
         library.removeBooks(book1);
         author1.removeBook(book1);
         library.displayBooks();

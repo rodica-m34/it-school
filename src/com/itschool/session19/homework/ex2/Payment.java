@@ -1,10 +1,10 @@
 package com.itschool.session19.homework.ex2;
 
 public class Payment {
-    private String paymentMethod;
-    private int paymentAmount;
+    private final String paymentMethod;
+    private final int paymentAmount;
     private String paymentStatus;
-    private Order order;
+    private final Order order;
 
     public Payment(String paymentMethod, int paymentAmount, Order order) {
         this.paymentMethod = paymentMethod;
@@ -13,13 +13,12 @@ public class Payment {
         this.order = order;
     }
 
-    public boolean processPayment() {
+    public void processPayment() {
         if (paymentAmount == order.calculateTotalOrderAmount()) {
             paymentStatus="paid";
-            return true;
+            return;
         }
         paymentStatus = "partially paid";
-        return false;
     }
 
     public void displayPaymentInformation() {
